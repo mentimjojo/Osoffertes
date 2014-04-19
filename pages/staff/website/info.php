@@ -2,7 +2,7 @@
     <ul class="nav nav-tabs">
       <li class="active"><a href="#info" data-toggle="tab">Informatie</a></li>
       <li><a href="#change" data-toggle="tab">Changelog</a></li>
-      <li><a href="<?= URL; ?>/inc/functions/phpinfo.php" target="_blank" data-toggle="tab">PHP info</a></li>
+      <li><a href="<?= URL; ?>/inc/functions/phpinfo.php" target="_blank">PHP info</a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="info">
