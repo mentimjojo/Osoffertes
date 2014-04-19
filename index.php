@@ -15,9 +15,16 @@ if($_GET['page'] == ""){
     $page = "Bestaat niet";
 } else {
 
-switch($_GET["page"]){
 
-	     case $page_system_info['page_name']:
+    if(SEO == 0){
+        $page_name = $page_system_info['page_name'];
+    } elseif(SEO == 1){
+        $page_name = $page_system_info['page_seo'];
+    }
+
+switch($_GET['page']) {
+
+	     case $page_name:
 	     define("PAGE_INCLUDE", "pages/".$page_system_info['page_link'].".".$page_system_info['page_ext']);
 	     define("PAGE_TOEGANG", $page_system_info['page_toegang']);
 	     break;
@@ -29,13 +36,6 @@ switch($_GET["page"]){
 if($_GET['page'] == ""){
     define("PAGE_INCLUDE", "pages/error/bestaat_niet.php");
 }
-
-echo $page_system_info['page_name']."<br/>";
-echo $page_system_info['page_toegang']."<br/>";
-echo $page_system_info['page_link']."<br/>";
-echo $page_system_info['page_ext']."<br/>";
-echo $_GET['page']."<br/>";
-echo PAGE_INCLUDE."<br/>";
 
     // Geen toegang system
     if(PAGE_TOEGANG == 1){
