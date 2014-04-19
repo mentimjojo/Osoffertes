@@ -119,7 +119,7 @@ if($succesvol == ""){
 					<hr size="1">
 					Je hebt nog <?php echo $_COOKIE['SECURITY_VAAK'] ?> login pogingen.<br/>
 					<a href="aanmelden.php?sessie=<?php echo $securityid; ?>&lang=<?php echo $_SESSION['lang']; ?>"><?php echo $lang_register; ?></a><br/>
-					<a href="reset-wachtwoord.php">Wachtwoord vergeten? Klik hier</a>
+					<a href="/web/forgot-password">Wachtwoord vergeten? Klik hier</a>
                     <div class="clearfix"></div>
             </div>
         </div>
