@@ -21,7 +21,7 @@ switch($_GET["page"]){
 	     define("PAGE_INCLUDE", "pages/".$page_system_info['page_link'].".".$page_system_info['page_ext']);
 	     define("PAGE_TOEGANG", $page_system_info['page_toegang']);
 	     break;
-
+        echo "Test<br/>";
 
    }
 }
@@ -46,9 +46,9 @@ echo PAGE_INCLUDE."<br/>";
 
     // Page namen
     $page_system3 = mysqli_query($con, 'SELECT * FROM ' . TBL_STANDAARD_PAGES . ' WHERE page_name = "'.$_GET['page'].'"');
-    while($page_system_info3 = mysqli_fetch_array($page_system3)){
+    $page_system_info3 = mysqli_fetch_array($page_system3);
     $page = $page_system_info3['page_titel'];
-    }
+
 
 // ONDERHOUD CHECK BEGIN //
 if(TOEGANG < "6"){ // Staff enzo
