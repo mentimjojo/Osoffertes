@@ -18,7 +18,7 @@
 		<br/>
 		<strong>Changelog 2:</strong> <a href="http://customers.developers4you.nl/pages/changelogs/changelog2.txt" target="_blank">Klik hier</a>
       </div>
-        <div class="tab-pane active in" id="software">
+        <div class="tab-pane fade" id="software">
             Alles over de php versie:
             <hr size="1">
             <?php
