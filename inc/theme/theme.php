@@ -14,20 +14,20 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a tabindex="-1" href="index.php?page=<?php echo STAFF_OVERZICHT; ?>">Overzicht</a></li>
+                            <li><a tabindex="-1" href="<?= SEO_LINK . STAFF_OVERZICHT; ?>">Overzicht</a></li>
                             <li class="divider"></li>
-							<li><a tabindex="-1" href="index.php?page=<?php echo STAFF_NIEUWS; ?>">Nieuws afdeling</a></li>
+							<li><a tabindex="-1" href="<?= SEO_LINK . STAFF_NIEUWS; ?>">Nieuws afdeling</a></li>
                             <li class="divider"></li>
-                            <li><a tabindex="-1" href="index.php?page=<?php echo STAFF_USERS; ?>">Klanten afdeling</a></li>
+                            <li><a tabindex="-1" href="<?= SEO_LINK . STAFF_USERS; ?>">Klanten afdeling</a></li>
 							<li class="divider"></li>
-                            <li><a tabindex="-1" href="index.php?page=<?php echo STAFF_DIENSTEN; ?>">Offertes/Producten afdeling</a></li>
+                            <li><a tabindex="-1" href="<?= SEO_LINK . STAFF_DIENSTEN; ?>">Offertes/Producten afdeling</a></li>
                             <li class="divider"></li>
-                            <li><a tabindex="-1" href="index.php?page=">Support afdeling</a></li>
+                            <li><a tabindex="-1" href="<?= SEO_LINK; ?> ">Support afdeling</a></li>
 							<?php if(TOEGANG == 10){ ?>
 							<li class="divider"></li>
-                            <li><a tabindex="-1" href="index.php?page=<?php echo STAFF_INFO; ?>">Systeem/software informatie</a></li>
+                            <li><a tabindex="-1" href="<?= SEO_LINK . STAFF_INFO; ?>">Systeem/software informatie</a></li>
 							<li class="divider"></li>
-                            <li><a tabindex="-1" href="index.php?page=<?php echo STAFF_SETTINGS; ?>">Website instellingen<?php if(ONDERHOUD == 1){ echo ' <i><font color="red">(In onderhoud)</font></i>'; } ?></a></li>
+                            <li><a tabindex="-1" href="<?=  SEO_LINK . STAFF_SETTINGS; ?>">Website instellingen<?php if(ONDERHOUD == 1){ echo ' <i><font color="red">(In onderhoud)</font></i>'; } ?></a></li>
 							<?php } ?>
                         </ul>
                     </li>
@@ -72,14 +72,14 @@
 	
 	        <a href="#support-menu" class="nav-header" data-toggle="collapse"><i class="icon-question-sign"></i>Staff<i class="icon-chevron-up"></i></a>
         <ul id="support-menu" class="nav nav-list collapse in">
-            <li ><a href="index.php?page=<?php echo STAFF_OVERZICHT; ?>">Overzicht</a></li>
-			<li ><a href="index.php?page=<?php echo STAFF_NIEUWS; ?>">Nieuws afdelig</a></li>
-            <li ><a href="index.php?page=<?php echo STAFF_USERS; ?>">Klanten afdeling</a></li>
-            <li ><a href="index.php?page=<?php echo STAFF_DIENSTEN; ?>">Offertes/producten afdeling</a></li>
-            <li ><a href="index.php?page=">Support afdeling</a></li>
+            <li ><a href="<?= SEO_LINK . STAFF_OVERZICHT; ?>">Overzicht</a></li>
+			<li ><a href="<?= SEO_LINK . STAFF_NIEUWS; ?>">Nieuws afdelig</a></li>
+            <li ><a href="<?= SEO_LINK . STAFF_USERS; ?>">Klanten afdeling</a></li>
+            <li ><a href="<?= SEO_LINK . STAFF_DIENSTEN; ?>">Offertes/producten afdeling</a></li>
+            <li ><a href="<?= SEO_LINK; ?>">Support afdeling</a></li>
             <?php if(TOEGANG == 10){ ?>
-            <li ><a href="index.php?page=<?php echo STAFF_INFO; ?>">Systeem/software informatie</a></li>
-            <li ><a href="index.php?page=<?php echo STAFF_SETTINGS; ?>">Website instellingen</a></li>
+            <li ><a href="<?= SEO_LINK . STAFF_INFO; ?>">Systeem/software informatie</a></li>
+            <li ><a href="<?= SEO_LINK . STAFF_SETTINGS; ?>">Website instellingen</a></li>
             <?php } ?>
         </ul>
 
