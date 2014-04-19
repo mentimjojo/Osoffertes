@@ -66,7 +66,7 @@ include("pages/login.php");
 $cookie_test_sql = mysqli_query($con,'SELECT * FROM ' . TBL_CUSTOMERS_REGISTRATIE . ' WHERE cookie_hash = "'.$_COOKIE['USER_SYSTEM'].'"');
 $cookie_test_tel = mysqli_num_rows($cookie_test_sql);
 if($cookie_test_tel == 0){
-header('Refresh: 0; url='.SEO_LINK.LOGOUT;);
+header('Refresh: 0; url='.SEO_LINK.LOGOUT);
 }
 // LOGIN CHECKS EINDE // 
 
