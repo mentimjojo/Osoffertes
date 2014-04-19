@@ -20,7 +20,7 @@ $fout = "Er moet een omschrijving ingevuld zijn.<br/><br/>";
 
 // uitvoeren
 mysqli_query($con,'UPDATE ' . TBL_CUSTOMERS_PRODUCTS . ' SET budget_wijzig="'.$pr_budget.'", tijd_wijzig="'.$pr_tijd.'", omschrijving_wijzig="'.$pr_oms.'", gewijzigd=1 WHERE id="'.$product_id.'"');
-header('Refresh: 0; url=index.php?page=' . EDIT_OFFERTE . '&product_id=2&bewerkt=1');
+header('Refresh: 0; url=' . SEO_LINK . '' . EDIT_OFFERTE . '&product_id=2&bewerkt=1');
 
 }
 }
@@ -47,7 +47,7 @@ header('Refresh: 0; url=index.php?page=' . EDIT_OFFERTE . '&product_id=2&bewerkt
     </form>
 	<?php
 	} else { 
-	header('Refresh: 5; url=index.php?page=' . PRODUCTS . '');
+	header('Refresh: 5; url=' . SEO_LINK . '' . PRODUCTS . '');
 	?>
 		<p class="block-heading" align="center">Product al 1 keer gewijzigd!</p>
         <div class="block-body gallery1">
@@ -57,7 +57,7 @@ header('Refresh: 0; url=index.php?page=' . EDIT_OFFERTE . '&product_id=2&bewerkt
         </div>
 		    </div>
 	<?php } else { 
-	header('Refresh: 5; url=index.php?page=' . PRODUCTS . '');
+	header('Refresh: 5; url=' . SEO_LINK . '' . PRODUCTS . '');
 	?>
     <center><h3><font color="green">U product/offerte is gewijzigd. Dit product is nu niet meer te wijzigen. U word doorgestuurd naar uw product/offerte overzicht.</font></h3></center>
     <?php } ?>	

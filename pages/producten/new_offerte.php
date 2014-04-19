@@ -20,7 +20,7 @@
 // User in database zetten
 mysqli_query($con,'INSERT INTO ' . TBL_CUSTOMERS_PRODUCTS . ' (klantnummer, product, valuta, budget, tijd, omschrijving, datum) 
 VALUES ("'.KLANTNUMMER.'", "'.$product_naam.'", "'.$product_valuta.'", "'.$product_budget.'", "'.$product_tijd.'", "'.$product_oms.'", "'.DATUM.'")');
-header('Refresh: 0; url=index.php?page=' . NIEUWE_OFFERTE . '&product=1');
+header('Refresh: 0; url=' . SEO_LINK . '' . NIEUWE_OFFERTE . '&product=1');
  }
  }
  

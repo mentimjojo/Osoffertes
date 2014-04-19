@@ -57,11 +57,11 @@ $pr_tel_query = mysqli_num_rows($pr_factuur_query);
           <td><center><?php if($product_info['behandeltdoor'] == ""){ echo '----'; } else { echo $product_info['behandeltdoor']; } ?></center></td>
           <td><center><?php if($pr_tel_query == 0){} else { echo '<a href="">Bekijk factuur</a>'; } ?></center></td>
           <td><center>
-		      <a href="index.php?page=<?php echo INFO_OFFERTE; ?>&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_info.png" alt="Informatie over uw product"></a>
+		      <a href="<?php echo SEO_LINK.INFO_OFFERTE; ?>&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_info.png" alt="Informatie over uw product"></a>
 			  <?php if($product_info['status'] >= 3){} else { ?>
-              <a href="index.php?page=<?php echo EDIT_OFFERTE; ?>&product_id=<?php echo $product_info['id']; ?>"><img src="images/icons/icon_wijzig.png" alt="Wijzig u offerte/product"></a>
+              <a href="<?php echo SEO_LINK.EDIT_OFFERTE; ?>&product_id=<?php echo $product_info['id']; ?>"><img src="images/icons/icon_wijzig.png" alt="Wijzig u offerte/product"></a>
 			  <?php } if($product_info['status'] >= 4){} else { ?>
-			  <a href="index.php?page=<?php echo PRODUCTS; ?>&annuleer=1&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw offerte/product"></a>
+			  <a href="<?php echo SEO_LINK.PRODUCTS; ?>&annuleer=1&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw offerte/product"></a>
 			  <?php } if($product_info['status'] == 5) { ?>
 			  <a href="<?php echo URL.'/pages/producten/download'; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_download.png" alt="Download uw product"></a>
 			  <?php } ?>
@@ -85,8 +85,8 @@ $newsid = $_GET['product_id'];
     <p class="error-text"><i class="icon-warning-sign modal-icon"></i><?php echo $lang_products_delete_delete; ?></p>
   </div>
   <div class="modal-footer">
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo PRODUCTS; ?>"><?php echo $lang_products_delete_cancel; ?></a>
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo PRODUCTS; ?>&annuleer=2&product_id=<?php echo $_GET['product_id']; ?>"><?php echo $lang_products_delete_ok; ?></a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?php echo SEO_LINK.PRODUCTS; ?>"><?php echo $lang_products_delete_cancel; ?></a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?php echo SEO_LINK.PRODUCTS; ?>&annuleer=2&product_id=<?php echo $_GET['product_id']; ?>"><?php echo $lang_products_delete_ok; ?></a>
   </div>
 </div>
 <?php } ?>
