@@ -24,7 +24,7 @@ define("DATUM", date_format($standaard_datum,"d-m-Y"));
 if(SEO == 0){
 define("SEO_LINK", "/index.php?page=");
 } else {
-define("SEO_LINK", "/page/");
+define("SEO_LINK", "/web/");
 }
 
 while($page_system_info2 = mysqli_fetch_array($page_system2)){

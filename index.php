@@ -15,7 +15,6 @@ if($_GET['page'] == ""){
     $page = "Bestaat niet";
 } else {
 
-
     if(SEO == 0){
         $page_name = $page_system_info['page_name'];
     } elseif(SEO == 1){
