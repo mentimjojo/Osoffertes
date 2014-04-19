@@ -1,0 +1,35 @@
+Todo lijst :
+
+- Indien je bij de 5de poging de juiste gegevens invult dan krijg je als nog blokkade                   maar je gaat dan toch naar de index en bent toch ingelogd(Bug).
+
+- Cookies aan ip en computer naam koppelen anders te onveilig.
+
+- Sql querys beveiligen tegen sql injections
+
+- Wachtwoord vergeten maken
+
+- Support(Support in algemeen maken.) tickets behandelen maken.
+
+- Factuur aanmaken doen. Factuur in pfd maken
+
+- Icon veranderen van staff menu. Zijn nu nog 2 verschillende en zijn beide niet goed.
+
+- Bug fixes dat ik in dropdown de toegang 10 niet zie. !!!DONE!!!
+
+- Tabellen voor kleinere beeldschermen fixen.
+
+- Forum maken
+
+- Veel gestelde vragen maken.
+
+- Overzicht staff afmaken
+
+- Betaal instellingen mijn account.
+
+- Staff klanten afdelingen verbeteren.
+
+- Nieuwsbrief systeem maken
+
+- Mails beveiligen.
+
+- 

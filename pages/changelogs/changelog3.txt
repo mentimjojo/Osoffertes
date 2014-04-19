@@ -1,0 +1,19 @@
+16-04-2014:
+
+ - Staff instellingen gemaakt voor menu positie.
+ - Support tickets overzicht gemaakt.
+ - Nieuwe support ticket maken.
+ - Config gerestyld.
+ - Page namen in website_pages tabel gezet.
+ - Page namen nu ook boven aan in balkje.
+ - Support tickets totaal aan home toegevoegd.
+ - Querys toegevoegd in querys.php
+ - Page fixes in index.php
+ - Function mailer gemaakt.
+ - Website pages waren weg, nu terug.
+ - Betere indeling in /functies bestanden
+ - Index verbeterd, geen switch meer voor pages.
+ - querys verbeterd.
+
+ Bugs:
+   #001: Gevonden: Als ik onderhoud aan zet stopt de website ermee.

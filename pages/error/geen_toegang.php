@@ -1,0 +1,1 @@
+<center><h3><font color="red">Helaas! Je hebt geen toegang tot deze pagina.</font></h3></center>

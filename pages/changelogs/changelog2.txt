@@ -1,0 +1,63 @@
+09-04-2014/10-04-2014/11-04-2014(3 dagen weer i.v.m zelfde zaken):
+
+ - Log systeem gemaakt, elke pagina die je bezoekt word in de database gezet.
+ - Wat text dingen gefixed
+ - Overzicht van alle producten/offertes gemaakt.
+ - Codes wat reorganiseert.
+ - settings_onderhoud in aparte tabel gezet, logs instellingen komen nog. 
+ - email_changes tabel is customers_email_changes geworden.
+ - Namen gewijzigd van een aantabellen, zoveel mogelijk al weer werkend gemaakt in script. 
+ - Ook settings tabellen gewijzigd.
+ - Logs login ips en page visits kunnen nog aan en uit gezet worden.
+ - Alle tabellen hebben nu of customers_ of staff_
+ - Tabellen uit bestand halen
+ - nu ook achter facturen hoeveel factuuren je open hebt staan. Dus status 1 of hoger( openstaand of verlopen dus!)
+ - ervoor gezorgt dat als je je product hebt gewijzigd dat ook daadwerkelijk de gewijzigde tekst op info product staat.
+ - Elk bestand werkt nu met de tabbelen halen uit defines etc. WOEHOEEEE
+ - in nieuws toegevoegd dat engelse shit niet meer hoeft, ook op nieuws edit.
+ - in mijn account nu een ip log overzicht. Die ook een error geeft als logs uitstaat.
+ - Login veiliger gemaakt
+
+ #009 - Gevonden: Staff geen toegang tot staff login.
+        Gefixed:  Nu is er een tabel voor staff ips, max 4 ips!
+
+12-04-2014/13-04-2014/14-04-2014:
+
+ Begonnen met grote reorganistatie onder ander:
+
+ - Nieuw page system met case/break via switch. Komt uit DB. De linkjes komen nu ook uit db dus als je iets aanpast is over de hele website hetzelfde.
+ - Probleem in account opgelost met ips onder alle tabs.
+ - Inc map volledig opnieuw gebouwd. Alles gaat nu via config.php
+ - website gaat meer naar os door alle tabellen uit db linkjes uit defines, etc.
+ - Alle paginas via nieuwe systeem.
+ - begonnen met staff overzicht
+ - Meerdere bugs gefixed.
+ - veel meer geordend in pages map
+ - staff/diensten nu diensten verwijderen.
+ - begonnen met behandelen product.
+ - activatie mail opnieuw sturen kan
+ - lang systeem eruit gehaald. 
+ - verschillende bugs in aanmelden gefixed.
+ - Verwijdere producten in dienst/offerte overzicht gesplitst. 
+ - Download links systeem aan offertes/producten toegevoegd.
+ - User wijzigen aan begonnen. Gegevens wijzigen kan al.
+ - Via user wijzigen enzo kan je nu het activatie mailtje hersturen.
+ - Zonder toegang kan je geen staff paginas meer bezoeken.
+ - Max 2 producten tegelijk die nog in behandeling genomen moeten worden. Als je er 2 hebt kun je geen nieuwe offertes maken.
+ - Cookie hash en registratie ip in een aperte tabel, is safer. 
+ - Bug gefixed dat als staff menu links staat dat mensen zonder rechten hem zien
+ - Op index nog wat bugges gefixed.
+ - Registeer pagina verbeterd qua uiterlijk.
+ - Project map maken in user_Edit toegevoegd.
+ - Voor product map aanmaken in klant project map. Als er nog geen klantmap is aanmaken.
+ - een nieuw bstand in functions/ namelijk dirs.php waarmee ik mappen maak en verwijder.
+ - Project map klant nu te verwijderen als er geen offertes/product mappen instaan.
+ - In user edit product overzicht toegevoegd.
+ - Ervoor gezorgt dat als er geen factuur is dat er 'Geen' staat.
+ - Ook standaard tekst aan product/download index toegevoegd.
+ - Automatisch een project link, ook voor de klant bij product info.
+ - Verschillede typ fouten opgelost.
+
+
+
+

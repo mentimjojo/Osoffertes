@@ -1,0 +1,64 @@
+03-04-2014:
+
+ - De :'s weg gehaald bij de labels van new offerte.
+ - Euro/Dollar keuze weg gehaald. 
+ - Editor gewijzigd, geen tineMCY meer, maar CKeditor.
+ - Begin gemaakt aan edit product. 
+
+
+ #001 - Gefixed: De bug op de home page, de laatste 5 producten(nieuwste) zijn nu goed, eerste werden gewoon 5                    producten opgehaald, niet de laatste 5.
+
+04-04-2014:
+
+ - Edit product is klaar, check en alles.
+ - Login en sessie systeem volledig herschreven, nu met sessie id in database.
+
+ #002 - Gefixed: Bug op staff/news edit waardoor je de dropdowns boven niet kon openen. 
+
+05-04-2014/06-04-2014(2 dagen i.v.m zelfde zaken) :
+
+ - Changelog aan website toegevoegd.
+ - Product/offerte info page klaar. Nog niet tevreden over status info tab
+ - Account(bewerken) beetje gerystled, indien je email wijzigd krijg je nieuwe email activatie link ervoor. 
+ - Ervoor gezorgd dat als je op mijn account bijvoorbeeld je ww of email wijzigt, en je doet iets fout dat je op    die tab blijft.
+ - activatie.php, hier gaan we nu van alles activeren. 
+ - Alle email changes etc worden gedaan via email_changes tabel:). 
+ - Staff tab boven aan gemaakt naast het persoonlijke dropdown menu.
+ - Beter systeem zodat we sommige opties per rank kunnen doen(staff dropdown). 
+ - Index.php vernieuwd, only code nu en geen html etc meer alles include.
+ - Onderhoud systeem erin gebouwd, ook met bericht. Staff kan er nog gewoon in.
+ - Staff login gemaakt, voor het geval dat site in onderhoud is. Nog niet beveiligd.
+ - Website instellingen mee begonnen, onderhoud aan/uit zetten en bericht mee geven is al mogelijk.
+ - Achter in het dropdown menu voor de staff, achter website instellingen staat een melding als website in    onderhoud is.
+ - Begonnen aan factuur systeem.
+ - Op home page die vakken onklikbaar gemaakt, plus factuur totaal werkt niet, en factuur met je laatste 5    facturen.
+ - Registeren mogelijk gemaakt indien in onderhoud, en in onderhoud pagina verbeterd. 
+ - Staff login verbeterd. Alleen staff met toegang 9 of hoger kan daar inloggen.
+ - Producten tellen nu alleen als goed gekeurd is.
+ - Delete knop verdwijnt als goedgekeurd is.
+ - Als er een factuur is bij een product komt er nu bekijk factuur.
+ - Bericht in dropdown staff verbeterd, bericht van in onderhoud.
+ - Login systeem compleet omgebouwd, geen sessies meer, alleen cookies
+ - Door cookies nu mogelijk ingelogd blijven. Doe je dat niet dan naar 1 uur auto uitgelogd.
+ - Staff login ook naar het nieuwe cookie systeem gebouwd.
+ - In mijn account je cookie hash neergezet. 
+ - Uitloggen gefixed, werkte niet meer omdat sessies weg zijn en we nu met cookies werken.
+ - Registeren activatie opnieuw gebouwd, ook op activatie.php gezet, en met geldig heid systeem.
+ - Op user pagina in staff bug gefixed dat iedereen nee was met geactiveerd ja of nee.(Had te maken met het    nieuwe activatie systeem.)
+ - Staff: Nu mogelijk op klanten overzicht, klanten te verwijderen.
+ - Gefixed dat als een staff lid een klant verwijderd, en die klant op dat moment is ingelogd of als rembember dus zodra die komt auto inlogdt dat zn account weg is maar hij wel ingelogd is. (Hierbij zag hij zn gegevens       natuurlijk niet. Want die waren weg)
+
+ #003 - Gevonden: Als je op de naam van de pagina boven aan klikt verdwijnt soms benodige informatie uit de link op een aantal pagina's.
+        Gefixed:  ^^ werkt nu:)
+ #004 - Gevonden: Als je wachtwoord wilt wijzigen, en je voert geen huidig wachtwoord in dan komt daar een enorme hash (sha1) te staan ook al vul je niks in.
+        Gefixed:  ^^ gebeurt niet meer.
+ #005 - Gevonden: Of het precies een bug is, no clue, maar de input vakken zijn opeens kleiner... nog wel even mooi.
+        Gefixt:   "<!DOCTYPE html>" moet bovenaan index.php.
+ #006 - Gefixt:   Bij tabellen stonden de opties boven elkaar, niet naast elkaar. En dat was niet echt mooi dus gefixt.
+ #007 - Gevonden: Op de home page is de limit 5 voor facturen en producten, maar het zijn niet de 5 nieuwste en niet georderd by datum.
+ #008 - Gevonden: Als het nieuws balkje er is, het kruisje is niet te zien.
+
+
+
+
+
