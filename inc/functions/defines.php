@@ -40,6 +40,7 @@ while($page_system_info2 = mysqli_fetch_array($page_system2)){
 if(isset($_COOKIE['USER_SYSTEM'])){
     define("KLANTNUMMER", $gev2['klantnummer']);
     define("KLANTNAAM", $gev2['initalen'].'.'.$gev2['achternaam']);
+    define("KLANT_PASS_CHANGE", $gev2['wachtwoord_change']);
     define("PROJECT_MAP", $gev2['project_map']);
     define("TOEGANG", $standaard_toegang_info['toegang']);
     define("TOEGANG_LOC" , $standaard_toegang_info['toegang_loc']);

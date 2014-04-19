@@ -67,13 +67,19 @@ $cookie_test_tel = mysqli_num_rows($cookie_test_sql);
 if($cookie_test_tel == 0){
 header('Refresh: 0; url='.SEO_LINK.LOGOUT);
 }
-// LOGIN CHECKS EINDE // 
+// LOGIN CHECKS EINDE //
+
+    if(KLANT_PASS_CHANGE == 1){
+      include("pages/account/password.php");
+    } else {
 
 /////////////////////////////////
 // HIER GEWOON STANDAARD BEGIN //
 include("inc/theme/theme.php");//
 // HIER GEWOON STANDAARD EINDE //
 /////////////////////////////////
+
+    }
 
 
 }
