@@ -85,7 +85,9 @@ include("inc/theme/theme.php");//
 }
 }
 } else {
+     if(KLANT_PASS_CHANGE == 1){
 include("inc/theme/theme.php"); // staff erin
+     }
 }
 
 // Log page system begin //
