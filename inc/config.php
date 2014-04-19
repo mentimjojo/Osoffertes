@@ -32,6 +32,5 @@ include("lang/nl/index.php");  // Taal
 // Include theme site
 include("theme/footer.php"); // Footer
 include("theme/style.php"); // Style
-include("theme/links_menu.php"); // Menus
 include("theme/balk.php"); // Menu(Balk boven)
 ?>
