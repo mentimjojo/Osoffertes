@@ -12,7 +12,7 @@ $toegang_customer_info_naam = $toegang_customer_info['initalen'].'.'.$toegang_cu
 if(isset($_POST['geef_toegang'])){
 mysqli_query($con,'INSERT INTO ' . TBL_TOEGANG . ' (klantnummer) 
 VALUES ("'.$_GET['klantnummer'].'")');
-header('Refresh: 0; url=index.php?page='.STAFF_USERS_TOEGANG.'&klantnummer='.$_GET['klantnummer'].'&goed=1');
+header('Refresh: 0; url=' . SEO_LINK . ''.STAFF_USERS_TOEGANG.'&klantnummer='.$_GET['klantnummer'].'&goed=1');
 }
 if(isset($_POST['delete_toegang'])){
 if($toegang_info_gev['toegang_delete'] == 1){
@@ -22,7 +22,7 @@ $stmt = $con->prepare('DELETE FROM ' . TBL_TOEGANG . ' WHERE klantnummer = ?');
 $stmt->bind_param('i', $_GET['klantnummer']);
 $stmt->execute(); 
 $stmt->close();
-header('Refresh: 0; url=index.php?page='.STAFF_USERS_TOEGANG.'&klantnummer='.$_GET['klantnummer'].'&goed=2');
+header('Refresh: 0; url=' . SEO_LINK . ''.STAFF_USERS_TOEGANG.'&klantnummer='.$_GET['klantnummer'].'&goed=2');
 }
 }
 if(isset($_POST['wijzig_toegang'])){
@@ -30,7 +30,7 @@ if($toegang_info_gev['toegang_change'] == 1){
 $fout = 'De toegang van deze gebruiker is niet te wijzigen';
 } else {
 mysqli_query($con,'UPDATE ' . TBL_TOEGANG . ' SET toegang = "'.$_POST['toegangs'].'" WHERE klantnummer="'.$_GET['klantnummer'].'"');
-header('Refresh: 0; url=index.php?page='.STAFF_USERS_TOEGANG.'&klantnummer='.$_GET['klantnummer'].'&goed=3');
+header('Refresh: 0; url=' . SEO_LINK . ''.STAFF_USERS_TOEGANG.'&klantnummer='.$_GET['klantnummer'].'&goed=3');
 }
 }
 

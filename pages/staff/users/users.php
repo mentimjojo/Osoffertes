@@ -79,12 +79,12 @@ while($staff_users_info = mysqli_fetch_array($staff_users))
           <td><center><?php echo $staff_users2_products.' product(en) | '.$staff_users3_products.' geannuleerde producten'; ?></center></td>
 		   <td><center><?php if($staff_users_info['project_map'] == 1){ echo 'Aanwezig(<a href="'.URL.'/projecten/'.$staff_users_info['klantnummer'].'/index.php" target="_blank">Link</a>)'; } else { echo 'Niet aanwezig'; } ?></center></td>
           <td><center>
-              <a href="index.php?page=<?php echo STAFF_USERS_EDIT; ?>&klantnummer=<?php echo $staff_users_info['klantnummer']; ?>"><img src="images/icons/icon_wijzig.png" alt="Wijzig gebruiker"></a>
+              <a href="<?= SEO_LINK.STAFF_USERS_EDIT; ?>&klantnummer=<?php echo $staff_users_info['klantnummer']; ?>"><img src="images/icons/icon_wijzig.png" alt="Wijzig gebruiker"></a>
 			  <?php if(TOEGANG == 10){ ?>
-              <a href="index.php?page=<?= STAFF_USERS_TOEGANG; ?>&klantnummer=<?= $staff_users_info['klantnummer'] ?>" role="button" data-toggle="modal"><img src="images/icons/icon_toegang.png" alt="Toegang gebruiker"></a>
+              <a href="<?= SEO_LINK.STAFF_USERS_TOEGANG; ?>&klantnummer=<?= $staff_users_info['klantnummer'] ?>" role="button" data-toggle="modal"><img src="images/icons/icon_toegang.png" alt="Toegang gebruiker"></a>
 			  <?php } ?>
 			  <?php if(TOEGANG >= 8){ ?>
-              <a href="index.php?page=<?php echo STAFF_USERS; ?>&delete=1&klantnummer=<?php echo $staff_users_info['klantnummer']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Verwijder gebruiker"></a>
+              <a href="<?= SEO_LINK.STAFF_USERS; ?>&delete=1&klantnummer=<?php echo $staff_users_info['klantnummer']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Verwijder gebruiker"></a>
 			  <?php } ?>
           </center></td>
         </tr>
@@ -106,8 +106,8 @@ $klantdelete = $_GET['klantnummer'];
     <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Weet je zeker dat je deze klant wilt verwijderen?!</p>
   </div>
   <div class="modal-footer">
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo STAFF_USERS; ?>">Annuleren.</a>
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo STAFF_USERS; ?>&delete=2&klantnummer=<?php echo $klantdelete; ?>">Ja verwijder!</a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.STAFF_USERS; ?>">Annuleren.</a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.STAFF_USERS; ?>&delete=2&klantnummer=<?php echo $klantdelete; ?>">Ja verwijder!</a>
   </div>
 </div>
 <?php } ?>

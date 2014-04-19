@@ -32,7 +32,7 @@ define("KLANTUSERNAAM", $klant_info1['initalen'].'.'.$klant_info1['achternaam'])
 // Gebruiker opslaan
 if(isset($_POST['opslaan_gebruiker'])){
 $geboortedatum = $_POST['geboorte_dag'].'-'.$_POST['geboorte_maand'].'-'.$_POST['geboorte_jaar'];
-header('Refresh: 0; url=index.php?page='.STAFF_USERS_EDIT.'&klantnummer='.$klantid.'&goed=1');
+header('Refresh: 0; url='.SEO_LINK.''.STAFF_USERS_EDIT.'&klantnummer='.$klantid.'&goed=1');
 mysqli_query($con,'UPDATE ' . TBL_CUSTOMERS . ' SET geboortedatum = "'.$geboortedatum.'", postcode="'.$_POST['postcode'].'", adres="'.$_POST['adres'].'", huisnummer="'.$_POST['huisnummer'].'", toevoeginghn="'.$_POST['toevoeging'].'", land="'.$_POST['land'].'", telefoon="'.$_POST['telefoon'].'", mobile="'.$_POST['mobiel'].'" WHERE klantnummer="'.$klantid.'"');
 }
 
@@ -194,7 +194,7 @@ echo '</select>';
 	   <?php if($klant_info2['activatie_geldig'] == 1){ echo 'Ja'; } else { echo 'Nee'; } ?><br/><br/>
 	   <label><strong>Herstuur activatie email:</strong></label>
 	   <?php if($klant_info2['activatie_status'] == 1){ echo 'Klant al geactiveerd'; } else { ?>
-	   <a href="index.php?page=<?php echo STAFF_USERS_EDIT; ?>&klantnummer=<?php echo $klant_info1['klantnummer']; ?>&verstuur_mail=1">Verstuur activatie mail</a>
+	   <a href="<?= SEO_LINK.STAFF_USERS_EDIT; ?>&klantnummer=<?php echo $klant_info1['klantnummer']; ?>&verstuur_mail=1">Verstuur activatie mail</a>
 	   <?php } ?>
       </div>
       <div class="tab-pane fade" id="producten">
@@ -241,8 +241,8 @@ $pr_user_info = mysqli_fetch_array($pr_user_query);
 		  <td><center><?php if($product_info['project_map'] == 1) { echo 'Aanwezig(<a href="'.URL.'/projecten/'.$product_info['klantnummer'].'/'.$product_info['id'].'" target="_blank">Linkje</a>)'; } else { echo 'Geen'; } ?></center></td>
           <td><center><?php if($pr_tel_query == 0){ echo 'Geen'; } else { echo '<a href="">Bekijk factuur</a>'; } ?></center></td>
           <td><center>
-		      <a href="index.php?page=<?php echo STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_behandelen.png" alt="Product behandelen."></a>
-			  <a href="index.php?page=<?php echo STAFF_DIENSTEN; ?>&annuleer=1&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw offerte/product"></a>
+		      <a href="<?php echo SEO_LINK.STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_behandelen.png" alt="Product behandelen."></a>
+			  <a href="<?php echo SEO_LINK.STAFF_DIENSTEN; ?>&annuleer=1&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw offerte/product"></a>
           </center></td>
         </tr>
 		
@@ -255,13 +255,13 @@ $pr_user_info = mysqli_fetch_array($pr_user_query);
 	   <hr size="1">
 	   <label><strong>Project map</strong></label>
        <?php if($klant_info1['project_map'] == 0){ ?>
-	   Er is nog geen map. <a href="index.php?page=<?= STAFF_USERS_EDIT; ?>&klantnummer=<?= $klantid; ?>&maak_map=1">Maak map</a>
+	   Er is nog geen map. <a href="<?= SEO_LINK.STAFF_USERS_EDIT; ?>&klantnummer=<?= $klantid; ?>&maak_map=1">Maak map</a>
 	   <?php } else { 
 	   if($klant_tel4 >= 1){
 	   ?>
 	   Er is al een map. Maar er staan ook offerte/product mappen in. Daarom is deze map niet te verwijderen.
 	   <?php } else { ?>
-	   Er is al een map. Er staan geen offerte/product mappen in. <a href="index.php?page=<?= STAFF_USERS_EDIT; ?>&klantnummer=<?= $klantid; ?>&delete_map=1">Verwijder map</a>
+	   Er is al een map. Er staan geen offerte/product mappen in. <a href="<?= SEO_LINK.STAFF_USERS_EDIT; ?>&klantnummer=<?= $klantid; ?>&delete_map=1">Verwijder map</a>
 	   <?php } ?>
 	   <?php  } ?>
       </div>
