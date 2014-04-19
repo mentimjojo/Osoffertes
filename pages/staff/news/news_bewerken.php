@@ -16,7 +16,7 @@ $melding = "Nederlandse titel is niet ingevuld";
 
 // uitvoeren
 mysqli_query($con,'UPDATE ' . TBL_CUSTOMERS_NIEUWS . ' SET titel="'.$edit_titelnl.'", bericht="'.$edit_berichtnl.'" WHERE id="'.$newsid.'"');
-header('Refresh: 0; url=index.php?page=' . STAFF_NIEUWS_EDIT . '&newsid=6&bewerk=0');
+header('Refresh: 0; url=' . SEO_LINK . '' . STAFF_NIEUWS_EDIT . '&newsid=6&bewerk=0');
 }
 }
 
@@ -27,7 +27,7 @@ $melding1 = "Nieuws succesvol gewijzigd. Je word doorgestuurd!";
 	<p class="block-heading">Nieuws bericht bewerken: </p>
         <div class="block-body gallery1">
 		<?php if($_GET['bewerk'] == 0){ 
-		header('Refresh: 5; url=index.php?page=' . STAFF_NIEUWS . '');
+		header('Refresh: 5; url=' . SEO_LINK . '' . STAFF_NIEUWS . '');
 		?>
          <center><h3><font color="green"><?php echo $melding1; ?></font></h3></center>
 		 <center><h3><font color="red"><?php echo $melding; ?></font></h3></center>

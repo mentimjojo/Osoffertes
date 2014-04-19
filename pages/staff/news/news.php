@@ -51,8 +51,8 @@ $stmt->close();
           <td><center><?php echo $staff_news_info['naam']; ?></center></td>
           <td><center><?php echo $staff_news_info['datum']; ?></center></td>
           <td><center>
-              <a href="index.php?page=<?php echo STAFF_NIEUWS_EDIT; ?>&newsid=<?php echo $staff_news_info['id'] ?>&bewerk=1"><img src="images/icons/icon_wijzig.png" alt="Wijzig dit nieuws bericht"></a>
-              <a href="index.php?page=<?php echo STAFF_NIEUWS; ?>&verwijder=1&newsid=<?php echo $staff_news_info['id'] ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete nieuws bericht"></a>
+              <a href="<?= SEO_LINK.STAFF_NIEUWS_EDIT; ?>&newsid=<?php echo $staff_news_info['id'] ?>&bewerk=1"><img src="images/icons/icon_wijzig.png" alt="Wijzig dit nieuws bericht"></a>
+              <a href="<?= SEO_LINK.STAFF_NIEUWS; ?>&verwijder=1&newsid=<?php echo $staff_news_info['id'] ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete nieuws bericht"></a>
           </center></td>
         </tr>
 
@@ -120,8 +120,8 @@ $newsid = $_GET['newsid'];
     <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Weet je zeker dat je dit nieuws bericht wil verwijderen?</p>
   </div>
   <div class="modal-footer">
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo STAFF_NIEUWS; ?>">Cancel</a>
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo STAFF_NIEUWS; ?>&verwijderd=1&newsid=<?php echo $newsid; ?>">Verwijder!</a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.STAFF_NIEUWS; ?>">Cancel</a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.STAFF_NIEUWS; ?>&verwijderd=1&newsid=<?php echo $newsid; ?>">Verwijder!</a>
   </div>
 </div>
 <?php } ?>
