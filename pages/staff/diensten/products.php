@@ -89,11 +89,11 @@ $pr_user_naam = 'Account verwijderd.';
 		  <td><center><?php if($product_info['project_map'] == 1) { echo 'Aanwezig(<a href="'.URL.'/projecten/'.$product_info['klantnummer'].'/'.$product_info['id'].'" target="_blank">Linkje</a>)'; } else { echo 'Geen'; } ?></center></td>
           <td><center><?php if($pr_tel_query == 0){ echo 'Geen'; } else { echo '<a href="">Bekijk factuur</a>'; } ?></center></td>
           <td><center>
-		      <a href="index.php?page=<?php echo STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_behandelen.png" alt="Product behandelen."></a>
-			  <a href="index.php?page=<?php echo STAFF_DIENSTEN; ?>&annuleer=1&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw offerte/product"></a>
+		      <a href="<?= SEO_LINK.STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_behandelen.png" alt="Product behandelen."></a>
+			  <a href="<?= SEO_LINK.STAFF_DIENSTEN; ?>&annuleer=1&product_id=<?php echo $product_info['id']; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw offerte/product"></a>
           </center></td>
         </tr>
-		
+
 		<?php } ?>
       </tbody>
     </table>
@@ -169,8 +169,8 @@ $newsid = $_GET['product_id'];
     <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Weet u zeker dat u dit product/offerte wilt verwijderen?</p>
   </div>
   <div class="modal-footer">
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo STAFF_DIENSTEN; ?>">Nee stop.</a>
-    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=<?php echo STAFF_DIENSTEN; ?>&annuleer=2&product_id=<?php echo $_GET['product_id']; ?>">Ja verwijderd.</a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.STAFF_DIENSTEN; ?>">Nee stop.</a>
+    <a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.STAFF_DIENSTEN; ?>&annuleer=2&product_id=<?php echo $_GET['product_id']; ?>">Ja verwijderd.</a>
   </div>
 </div>
 <?php } ?>

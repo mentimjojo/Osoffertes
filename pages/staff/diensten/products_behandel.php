@@ -140,11 +140,11 @@ $goed = 'Ftp user gemaakt.';
 	  <hr size="1">
 	  <label><strong>Project map van offerte: </label></strong>
 	  <?php if($product_info['project_map'] == 0){ ?>
-	  <a href="index.php?page=<?= STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?= $product_id; ?>&maak_map=1">Maak map</a><br/>
+	  <a href="<?= SEO_LINK.STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?= $product_id; ?>&maak_map=1">Maak map</a><br/>
 	  <?php } else { ?>
 	  <a href="<?= URL.'/projecten/'.$product_info['klantnummer'].'/'.$product_info['id'].'/'; ?>" target="_blank">Klik hier voor de project map.</a><br/>
 	  <?php if(TOEGANG == 10) { ?>
-	  <a href="index.php?page=<?= STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?= $product_id; ?>&verwijder_map=1">Verwijder map</a>
+	  <a href="<?= SEO_LINK.STAFF_DIENSTEN_BEHANDEL; ?>&product_id=<?= $product_id; ?>&verwijder_map=1">Verwijder map</a>
 	  <?php } } ?>
 	  <br/><br/><label><strong>Download map van offerte:</strong></label>
 	  <?php if($product_info['project_map'] == 1){ ?>

@@ -39,8 +39,8 @@ if($_GET['page'] == ""){
 
     // Geen toegang system
     if(PAGE_TOEGANG == 1){
-	if(TOEGANG > 0){ } ELSE { 
-	header('Refresh: 0; url=index.php?page=geen_toegang');
+	if(TOEGANG > 0){ } ELSE {
+        define("PAGE_INCLUDE", "pages/error/geen_toegang.php");
 	}
 	}
 
@@ -62,10 +62,11 @@ if($_COOKIE['USER_SYSTEM'] == ""){
 include("pages/login.php");
 } else {
 
+    // Cookie test
 $cookie_test_sql = mysqli_query($con,'SELECT * FROM ' . TBL_CUSTOMERS_REGISTRATIE . ' WHERE cookie_hash = "'.$_COOKIE['USER_SYSTEM'].'"');
 $cookie_test_tel = mysqli_num_rows($cookie_test_sql);
 if($cookie_test_tel == 0){
-header('Refresh: 0; url=index.php?page=uitloggen');
+header('Refresh: 0; url='.SEO_LINK.LOGOUT;);
 }
 // LOGIN CHECKS EINDE // 
 
