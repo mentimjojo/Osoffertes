@@ -212,7 +212,7 @@ mail($to1, $subject1, $message1, $headers1);
           <option value="nl" <?php if($gev2['land'] == 'nl'){?> selected <?php } ?> ><?php echo $lang_account_land_nl; ?></option>
           <option value="be" <?php if($gev2['land'] == 'be'){?> selected <?php } ?> ><?php echo $lang_account_land_be; ?></option>
     </select><br/><br/>
-	 <br/><p><a class="btn btn-primary btn-large" href="index.php?page=account&bewerken=1&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_account_vak_bewerk; ?></a></p>
+	 <br/><p><a class="btn btn-primary btn-large" href="<?= SEO_LINK.ACCOUNT; ?>&bewerken=1&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_account_vak_bewerk; ?></a></p>
 	 <?php } elseif($_GET['bewerken'] == "1"){   ?>
     <form method="post" action="<?php echo $_SERVER['REQUEST_URI']; ?>" id="tab">
         <label><?php echo $lang_account_vak_kn; ?></label>
@@ -339,7 +339,7 @@ while($ips_info = mysqli_fetch_array($ips_sql)) {
     <p class="error-text"><i class="icon-warning-sign modal-icon"></i><?php echo $lang_wachtwoord_goed_vak_zin; ?></p>
   </div>
   <div class="modal-footer">
-    <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=account&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
+    <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.ACCOUNT; ?>&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
   </div>
 </div>
 <?php } ?>
@@ -354,7 +354,7 @@ while($ips_info = mysqli_fetch_array($ips_sql)) {
     <p class="error-text"><i class="icon-warning-sign modal-icon"></i><?php echo $lang_wachtwoord_goed_vak_zin1; ?></p>
   </div>
   <div class="modal-footer">
-    <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=account&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
+    <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.ACCOUNT; ?>&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
   </div>
 </div>
 <?php } ?>
@@ -369,7 +369,7 @@ while($ips_info = mysqli_fetch_array($ips_sql)) {
     <p class="error-text"><i class="icon-warning-sign modal-icon"></i>U nieuwe email adres is succesvol opgeslagen. Er is een mailtje verstuurd naar uw nieuwe en oude email. U nieuwe email adres dient geverifieerd te worden. Klik hiervoor op de link in de email die gestuurd is naar u nieuwe email adres.</p>
   </div>
   <div class="modal-footer">
-    <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=account&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
+    <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.ACCOUNT; ?>&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
   </div>
 </div>
 <?php } ?>
@@ -384,7 +384,7 @@ while($ips_info = mysqli_fetch_array($ips_sql)) {
             <p class="error-text"><i class="icon-warning-sign modal-icon"></i>Uw nieuwe staff instellingen zijn succeslvol opgeslagen..</p>
         </div>
         <div class="modal-footer">
-            <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="index.php?page=account&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
+            <p><a class="btn btn-primary btn-large" id="modal_close" class="close" href="<?= SEO_LINK.ACCOUNT; ?>&security=<?php echo $sessieids; ?>&sessie=<?php echo $securityid; ?>"><?php echo $lang_wachtwoord_goed_vak_door; ?></a></p>
         </div>
     </div>
 <?php } ?>
