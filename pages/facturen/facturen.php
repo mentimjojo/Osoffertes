@@ -41,8 +41,8 @@ $producten_factuur_info = mysqli_fetch_array($producten_factuur_query);
           <td><center>&euro;<?php echo $factuur_info['factuur_prijs']; ?></center></td>
           <td><center><?php if($factuur_info['factuur_status'] == 0){ echo 'Betaald'; } elseif($factuur_info['factuur_status'] == 1) { echo 'Openstaand'; } elseif($factuur_info['factuur_status'] == 2) { echo 'Verlopen'; }  ?></center></td>
           <td><center>
-		      <a href="#" role="button" data-toggle="modal"><img src="images/icons/icon_info.png" alt="Informatie over uw factuur"></a>
-			  <a href="#" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw factuur"></a>
+		      <a href="<?= SEO_LINK; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_info.png" alt="Informatie over uw factuur"></a>
+			  <a href="<?= SEO_LINK; ?>" role="button" data-toggle="modal"><img src="images/icons/icon_delete.png" alt="Delete uw factuur"></a>
           </center></td>
         </tr>
 		
