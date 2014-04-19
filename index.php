@@ -86,6 +86,8 @@ include("inc/theme/theme.php");//
 }
 } else {
      if(KLANT_PASS_CHANGE == 1){
+         include("pages/account/password.php");
+     } else {
 include("inc/theme/theme.php"); // staff erin
      }
 }

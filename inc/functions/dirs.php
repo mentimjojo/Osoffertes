@@ -1,7 +1,7 @@
 <?php
 
 function deleteDir($dirPath) {
-   getcwd().$dirPath;
+    getcwd().$dirPath;
     if (!is_dir($dirPath)) {
         throw new InvalidArgumentException("$dirPath moet een map zijn!");
     }
@@ -19,14 +19,14 @@ function deleteDir($dirPath) {
     rmdir($dirPath);
 }
 
-function createDir($dir, $file) {    
+function createDir($dir, $file) {
     if (!file_exists($dir)) {
         mkdir($dir, 0777, true);
         touch($dir."/".$file);
-		$fpath = $dir.'/'.$file;
-		$owner = "tnijborg";
-		chmod($dir, 0777);
-		chmod($fpath, 0777);
+        $fpath = $dir.'/'.$file;
+        $owner = "tnijborg";
+        chmod($dir, 0777);
+        chmod($fpath, 0777);
     } else {
         echo $goed = "Map bestaat al.";
     }
