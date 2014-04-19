@@ -3,9 +3,6 @@ ErrorDocument 404 http://www.customers.developers4you.nl/404.php
 
 ## Rewrite
 RewriteEngine On
-RewriteRule ^page/(.*) index.php?page=$1
-RewriteRule ^page/producten/info/(.*) index.php?page=info_offerte&product_id=$1
-RewriteRule ^page/producten/edit/(.*) index.php?page=edit_offerte&product_id=$1
-RewriteRule ^page/producten/delete/(.*)/id/(.*) index.php?page=products&annuleer=$1&product_id=$2
+RewriteRule ^(.*) index.php?page=$1
 RewriteRule ^web/phpinfo inc/functions/phpinfo.php
 RewriteRule ^web/changelog/(.*) pages/changelogs/changelog$1.txt
