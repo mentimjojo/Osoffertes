@@ -1,0 +1,6 @@
+## Error page
+ErrorDocument 404 http://www.customers.developers4you.nl/404.php
+
+## Rewrite
+RewriteEngine On
+RewriteRule ^page/(.*) index.php?page=$1
