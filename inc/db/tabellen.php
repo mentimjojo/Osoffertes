@@ -14,7 +14,7 @@ define("TBL_STANDAARD_PAGES", $prefix."website_pages");
 
 // Customers define
 define("TBL_CUSTOMERS", $prefix."customers");
-define("TBL_CUSTOMERS_REGISTRATIE", $prefix."customers_registratie");
+define("TBL_CUSTOMERS_REGISTRATIE", $prefix."customers_hash");
 define("TBL_CUSTOMERS_ACTIVATION", $prefix."customers_activation");
 define("TBL_CUSTOMERS_EMAIL_CHANGES", $prefix."customers_email_changes");
 define("TBL_CUSTOMERS_HASH", $prefix."customers_hash");
