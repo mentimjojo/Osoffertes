@@ -83,7 +83,7 @@ $stmt->close();
 		 $melding1 = "Nieuws toegevoegd";
 		 
 		 mysqli_query($con,'INSERT INTO ' . TBL_CUSTOMERS_NIEUWS . ' (titel, naam, klantnummer, bericht, datum) 
-         VALUES ("'.$opslaan_titelnl.'", "'.$opslaan_geschreven.'", "'.$klant_nummer.'", "'.$opslaan_newsnl.'", "'.DATUM.'")');
+         VALUES ("'.$opslaan_titelnl.'", "'.$opslaan_geschreven.'", "'.KLANTNUMMER.'", "'.$opslaan_newsnl.'", "'.DATUM.'")');
 		 
 		 
 		 
@@ -97,7 +97,7 @@ $stmt->close();
 		<label>Titel nederlands</label>
         <input type="text" class="input-xlarge" name="titelnl" value="<?php echo $opslaan_titelnl; ?>">
 		<label>Geschreven door</label>
-        <input type="text" class="input-xlarge" name="geschreven" value="<?php echo $klant_naam; ?>" disabled>
+        <input type="text" class="input-xlarge" name="geschreven" value="<?php echo KLANTNAAM; ?>" disabled>
 	    <label>Bericht Nederlands:</label>
         <textarea name="nieuws_nl" id="textarea" style="width:750px; height:500px;"><?php echo $opslaan_newsnl; ?></textarea><br/>
         <br/><br/>
