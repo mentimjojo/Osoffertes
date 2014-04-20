@@ -3,7 +3,8 @@ ErrorDocument 404 http://www.customers.developers4you.nl/404.php
 
 ## Rewrite
 RewriteEngine On
-RewriteRule ^page/(.*) index.php?page=$1
-RewriteRule ^web/phpinfo inc/functions/phpinfo.php
-RewriteRule ^web/changelog/(.*) pages/changelogs/changelog$1.txt
-RewriteRule ^web/forgot-password reset-wachtwoord.php
+RewriteRule ^web/(.*) index.php?page=$1
+RewriteRule ^info/phpinfo inc/functions/phpinfo.php
+RewriteRule ^info/changelog/(.*) pages/changelogs/changelog$1.txt
+RewriteRule ^account/forgot-password reset-wachtwoord.php
+RewriteRule ^account/aanmelden aanmelden.php
