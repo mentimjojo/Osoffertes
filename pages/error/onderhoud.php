@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-//include
-include("inc/config.php");
-
-
-?>
 <html lang="en">
 
 <?php echo $style; ?>
