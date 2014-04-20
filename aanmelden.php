@@ -192,7 +192,7 @@ echo("</select>");
 					<font color="red">*</font> <?php echo $lang_register_verplicht; ?><br/>
 					<font color="red">**</font> <?php echo $lang_register_verplicht1; ?>
 					<?php } elseif($_GET['gelukt'] == 1) { 
-					header('Refresh: 5; url=index.php');
+					header('Refresh: 5; url=/index.php');
 					?>
 				    <center><font color="green"><?php echo $goed; ?></font></center>
 					<?php } ?>
