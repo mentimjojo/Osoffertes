@@ -27,17 +27,21 @@ U heeft een nieuw wachtwoord aangevraagd. Uw nieuwe wachtwoord is:
 <br/><br/>
 <strong>' . $post_pass . '</strong>
 <br/><br/>
+Als u ingelogd met dit wachtwoord bent u verplicht uw wachtwoord aan te passen.
+<br/><br/>
 Met vriendelijke groeten,<br/>
 Developers4you.nl
 </body>
 </html>
 ';
 mailNow($reset_pass_info1['email'], "Nieuw wachtwoord", $message1, $reset_pass_info1['initalen'].".".$reset_pass_info1['achternaam']);
-            mysqli_query($con, 'UPDATE ' . TBL_CUSTOMERS . ' SET wachtwoord = "'.sha1($post_pass).'", wachtwoord_change = 1 WHERE email = "'.$post_email.'"');
-$fout = '<strong><font color="green">Er is een mail naar je gestuurd met een nieuw wachtwoord.</font></strong><br/><br/>';
+mysqli_query($con, 'UPDATE ' . TBL_CUSTOMERS . ' SET wachtwoord = "'.sha1($post_pass).'", wachtwoord_change = 1 WHERE email = "'.$post_email.'"');
+$fout = '<font color="green">Er is een mail naar je gestuurd met een nieuw wachtwoord. Je word doorgestuurd naar de login pagina.</font><br/><br/>';
+header('Refresh: 5; url='.URL);
 
         } else {
-            $fout = '<strong><font color="green">Er is een mail naar je gestuurd met een nieuw wachtwoord.</font></strong><br/><br/>';
+            $fout = '<font color="green">Er is een mail naar je gestuurd met een nieuw wachtwoord. Je word doorgestuurd naar de login pagina.</font><br/><br/>';
+            header('Refresh: 5; url='.URL);
         }
 
     } else {
