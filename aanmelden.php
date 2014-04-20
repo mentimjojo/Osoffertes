@@ -67,7 +67,7 @@ $fout = $lang_register_fout_ip;
 } else {
 
 // uitvoeren
-header('Refresh: 0; url=aanmelden.php?gelukt=1');
+header('Refresh: 0; url=/account/aanmelden?gelukt=1');
 
 // User in database zetten
 mysqli_query($con,'INSERT INTO ' . TBL_CUSTOMERS . ' (klantnummer, initalen, tussenvoegsel, achternaam, geboortedatum, land, telefoon, mobile, wachtwoord, email, geslacht)
