@@ -67,9 +67,10 @@ setcookie("USER_SYSTEM", sha1($klantnummer));
 } else {
 setcookie("USER_SYSTEM", sha1($klantnummer), time()+3600);
 }
+
 echo $_COOKIE['USER_SYSTEM'];
 
-header('Refresh: 5; url=index.php');
+header('Refresh: 5; url='.SEO_LINK.HOME);
 $succesvol = 1;
 
 if(LOGS_LOGIN_IPS == 1){
@@ -130,7 +131,7 @@ if($succesvol == ""){
 <?php 
 }
 else {
-header('Refresh: 5; url=index.php');
+header('Refresh: 5; url='.SEO_LINK.HOME);
 echo $_COOKIE['USER_SYSTEM'];
 ?>
         <div class="row-fluid">

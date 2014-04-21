@@ -8,3 +8,4 @@ RewriteRule ^info/phpinfo inc/functions/phpinfo.php
 RewriteRule ^info/changelog/(.*) pages/changelogs/changelog$1.txt
 RewriteRule ^account/forgot-password reset-wachtwoord.php
 RewriteRule ^account/aanmelden aanmelden.php
+RewriteRule ^account/login pages/login.php
