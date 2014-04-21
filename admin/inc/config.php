@@ -1,0 +1,4 @@
+<?php
+// Standaard include config
+
+?>
