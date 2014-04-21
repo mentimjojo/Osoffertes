@@ -4,33 +4,19 @@
 // CONFIG BEGIN INCLUDE IN ELK BESTAND //
 ////////////////////////////////////////
 
-// Session
-session_start();
-ob_start();
-
-// Security
-$sessieids = mt_rand();
-$securityid = sha1($sessieids);
-
-// Titel site
-$title = $lang_title;
-
-// Taal
-$settings_nieuws = $settingsgev['bericht_nieuws_nl'];
-$news = "nl";
-
 // Include important //
-include("db/database.php"); // Db connectie
-include("db/tabellen.php"); // Db tabellen
-include("db/querys.php");   // Db querys
-include("functions/datum.php"); // Datum
-include("functions/defines.php"); // Defines
-include("functions/dirs.php"); // Dirs function
-include("functions/mailer.php"); // Mail function
-include("lang/nl/index.php");  // Taal
+include_once("db/database.php"); // Db connectie
+include_once("db/tabellen.php"); // Db tabellen
+include_once("db/querys.php");   // Db querys
+include_once("functions/overige.php"); // Overige
+include_once("functions/datum.php"); // Datum
+include_once("functions/defines.php"); // Defines
+include_once("functions/dirs.php"); // Dirs function
+include_once("functions/mailer.php"); // Mail function
+include_once("lang/nl/index.php");  // Taal
 
 // Include theme site
-include("theme/footer.php"); // Footer
-include("theme/style.php"); // Style
-include("theme/balk.php"); // Menu(Balk boven)
+include_once("theme/footer.php"); // Footer
+include_once("theme/style.php"); // Style
+include_once("theme/balk.php"); // Menu(Balk boven)
 ?>
